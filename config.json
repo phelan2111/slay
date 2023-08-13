@@ -1,0 +1,18 @@
+{
+    "user": {
+        "host": "http://0.0.0.0:5000/api",
+        "api": {
+            "kyc": {
+                "register": "/kyc/register",
+                "login": "/kyc/login"
+            },
+            "post": "/post",
+            "detail": {
+                "post": "/post/detail"
+            },
+            "comment": {
+                "_": "/post/comment"
+            }
+        }
+    }
+}
