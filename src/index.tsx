@@ -13,6 +13,12 @@ const root = ReactDOM.createRoot(
 
 const isMobileDevice = window.innerWidth < 1024;
 
+const resizeOps = () => {
+  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+};
+
+resizeOps();
+window.addEventListener("resize", resizeOps);
 
 root.render(
   <React.StrictMode>
