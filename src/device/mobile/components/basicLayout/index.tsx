@@ -11,7 +11,7 @@ const BasicLayout: React.FC<IBasicLayout> = ({ children }) => {
     return (
         <Box
             className={
-                'bg-kyc-mobile h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center'
+                'bg-kyc-mobile bg-cover bg-center bg-no-repeat flex justify-center items-center layoutM_height p-4'
             }
         >
             <Box className="p-8 rounded-lg relative">

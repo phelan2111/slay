@@ -7,5 +7,21 @@
     "post": "Bài Đăng",
     "profile": "Trang cá nhân",
     "kyc.welcome.title": "Chào mừng",
-    "kyc.welcome.description": "Hãy tận hưởng mọi niềm vui với SLAY và chúng tôi rất vui được giúp bạn điều đó."
+    "kyc.welcome.description": "Hãy tận hưởng mọi niềm vui với SLAY và chúng tôi rất vui được giúp bạn điều đó.",
+    "kyc.welcome.haveAnAccount": "Bạn đã tạo tài khoản chưa",
+    "kyc.welcome.signUp": "Đăng ký",
+    "kyc.welcome.signInNow": "Đăng nhập ngay",
+    "kyc.signIn.title": "Đăng nhập",
+    "kyc.signIn.description": "Đăng nhập để có trải nghiêm tốt hơn cùng SLAY. Chúng tôi rất vui khi được hỗ trợ bạn.",
+    "kyc.signIn.username": "Tên đăng nhập",
+    "kyc.signIn.forgotPassword": "Quên mật khẩu",
+    "kyc.signIn.numberPhone": "Vui lòng nhập số điện thoại",
+    "kyc.signIn.password": "Vui lòng nhập mật khẩu",
+    "kyc.signIn.doNotHaveAccount": "Bạn chưa có tài khoản.",
+    "kyc.signUp.firstName": "Vui lòng nhập tên",
+    "kyc.signUp.lastName": "Vui lòng nhập tên đệm",
+    "kyc.forgotPassword.title": "Quên mật khẩu",
+    "kyc.forgotPassword.description": "Bạn quên mật khẩu? Đừng lo lắng. Sẽ có OTP gồm bốn kí tự gửi về số điện thoại của bạn.",
+    "kyc.forgotPassword.goBack": "Bạn đã có tài khoản",
+    "kyc.forgotPassword.send": "Gửi"
 }

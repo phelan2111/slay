@@ -15,10 +15,14 @@ const LoginComponent: React.FC<ILoginComponent> = ({ setState }) => {
     const onRedirectRegister = () => {
         setState({ active: ACTION_STEP_KYC.REGISTER });
     };
+    const onRedirectForgotPassword = () => {
+        setState({ active: ACTION_STEP_KYC.FORGOT_PASSWORD });
+    };
+
     return (
         <FormControl>
             <Box className="flex flex-col gap-4">
-                <From onSubmit={(dataItem) => {}} filed={['name', 'email', 'phone']}>
+                <From onSubmit={(dataItem) => {}} filed={['name', 'email', 'password']}>
                     <Box className="flex flex-col gap-6">
                         <InputKYC
                             color="primary"
@@ -27,14 +31,19 @@ const LoginComponent: React.FC<ILoginComponent> = ({ setState }) => {
                         />
                         <InputKYC
                             label={<Localize til="kyc.signIn.password" />}
-                            name="email"
+                            name="password"
                         />
+                        <Box className="text-sm flex justify-end text-white">
+                            <u onClick={onRedirectForgotPassword}>
+                                <Localize til="kyc.signIn.forgotPassword" />
+                            </u>
+                        </Box>
                         <Button
                             className="h-14 bg-gradient-to-r from-purple-600 to-blue-600"
                             variant="contained"
                             type="submit"
                         >
-                            <Localize til="kyc.welcome.signUp" />
+                            <Localize til="kyc.signIn.title" />
                         </Button>
                     </Box>
                 </From>

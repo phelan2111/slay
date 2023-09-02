@@ -26,7 +26,7 @@ const WelcomeComponent: React.FC<IWelcomeComponent> = ({ setState }) => {
                     onClick={onRedirectLogin}
                     className="absolute bottom-11 right-0 p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl font-bold text-white text-sm"
                 >
-                    Sign In Now
+                    <Localize til="kyc.welcome.signInNow" />
                 </Box>
             </article>
             <article className="flex flex-col gap-1">

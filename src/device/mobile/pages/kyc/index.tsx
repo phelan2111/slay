@@ -5,6 +5,8 @@ import WelcomeComponent from './form/welcome';
 import { Box } from '@mui/material';
 import Localize from 'localize';
 import LoginComponent from './form/login';
+import RegisterComponent from './form/register';
+import ForgotPasswordComponent from './form/forgotpassword';
 
 export enum ACTION_STEP_KYC {
     WELCOME = 0,
@@ -38,16 +40,16 @@ const stepsForm: (
             title: <Localize til="kyc.signIn.title" />,
         },
         {
-            component: <WelcomeComponent setState={setState} />,
-            description: 'ewqe',
+            component: <RegisterComponent setState={setState} />,
+            description: <Localize til="kyc.signIn.description" />,
             id: ACTION_STEP_KYC.REGISTER,
-            title: 'wqeqwe',
+            title: <Localize til="kyc.welcome.signUp" />,
         },
         {
-            component: <WelcomeComponent setState={setState} />,
-            description: 'ewqe',
+            component: <ForgotPasswordComponent setState={setState} />,
+            description: <Localize til="kyc.forgotPassword.description" />,
             id: ACTION_STEP_KYC.FORGOT_PASSWORD,
-            title: 'wqeqwe',
+            title: <Localize til="kyc.forgotPassword.title" />,
         },
         {
             component: <WelcomeComponent setState={setState} />,
@@ -63,7 +65,7 @@ export interface IState {
 }
 
 const initialState: IState = {
-    active: ACTION_STEP_KYC.LOGIN,
+    active: ACTION_STEP_KYC.WELCOME,
 };
 
 const Index = () => {
