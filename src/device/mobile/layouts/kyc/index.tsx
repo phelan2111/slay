@@ -1,14 +1,16 @@
 /** @format */
 
 import { Outlet } from 'react-router-dom';
-import 'assets/images/kyc/images-kycM.jpg';
 import './_index.scss';
 import ThemeComponent from 'device/mobile/components/theme';
+import BasicLayout from 'device/mobile/components/basicLayout';
 
 const LayoutKYCComponent = () => {
     return (
         <ThemeComponent>
-            <Outlet />
+            <BasicLayout>
+                <Outlet />
+            </BasicLayout>
         </ThemeComponent>
     );
 };

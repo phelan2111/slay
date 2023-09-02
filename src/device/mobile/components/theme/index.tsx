@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import SpeedDialComponent from './drawer';
+import SpeedDialComponent from './speedDial';
 import './_index.scss';
 import { langSelector, setLangs } from 'stores/reducer/lang';
 import { useDispatch, useSelector } from 'react-redux';

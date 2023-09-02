@@ -1,0 +1,1 @@
+export type themeSlay = "primary" | "secondary" | "success" | "warning" | "white" | "dark"
