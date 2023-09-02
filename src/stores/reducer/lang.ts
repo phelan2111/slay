@@ -6,7 +6,7 @@ export interface StateLang {
 }
 
 const initialState: StateLang = {
-    lang: 'vn'
+    lang: 'en'
 };
 
 const langReducer = createSlice({

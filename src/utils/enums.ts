@@ -1,3 +1,4 @@
 export enum PATH {
-    HOME = '/'
+    HOME = '/',
+    SLAY_HOME = '/slay'
 }

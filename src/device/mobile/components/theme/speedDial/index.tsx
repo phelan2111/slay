@@ -62,15 +62,21 @@ const SpeedDialComponent = ({
             <Backdrop
                 sx={{
                     backgroundColor: 'white',
+                    zIndex: 1000,
                 }}
+                onClick={onClose}
                 open={open}
             />
             <SpeedDial
                 className="fixed right-6 bottom-8"
                 ariaLabel="SpeedDial tooltip example"
-                icon={open ? <AiOutlineClose /> : <AiOutlinePlus />}
-                onClose={onClose}
-                onOpen={onOpen}
+                icon={
+                    open ? (
+                        <AiOutlineClose onClick={onClose} />
+                    ) : (
+                        <AiOutlinePlus onClick={onOpen} />
+                    )
+                }
                 open={open}
             >
                 {actions.map((item, index) => (

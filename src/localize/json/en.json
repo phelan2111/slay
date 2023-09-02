@@ -5,5 +5,15 @@
     "langues.en": "English",
     "langues.vn": "VietNamese",
     "post": "Posts",
-    "profile": "Profile"
+    "profile": "Profile",
+    "kyc.welcome.title": "welcome",
+    "kyc.welcome.description": "Please enjoy all the fun with SLAY and we are happy to help you with that.",
+    "kyc.welcome.haveAnAccount": "Already have an account?",
+    "kyc.welcome.signUp": "Sign Up",
+    "kyc.signIn.title": "Sign In",
+    "kyc.signIn.description": "Sign in to have a better experience with Slay, We're happy to help you.",
+    "kyc.signIn.username": "Username",
+    "kyc.signIn.numberPhone": "Enter your phone number",
+    "kyc.signIn.password": "Enter your password",
+    "kyc.signIn.doNotHaveAccount": "Do not have an account?"
 }
