@@ -5,4 +5,35 @@
         overflow: hidden;
         height: 100dvh;
     }
+
+    &-animationRedirect {
+        animation: animationRedirect 0.8s alternate;
+        z-index: 20;
+        top: 0;
+        right: 100%;
+
+        @keyframes animationRedirect {
+            0% {
+                right: 0;
+            }
+
+            100% {
+                right: 100%;
+            }
+        }
+    }
+
+    &-animationRedirectTransform {
+        animation: animationRedirectTransform 0.8s alternate;
+
+        @keyframes animationRedirectTransform {
+            0% {
+                transform: translateX(20px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+    }
 }

@@ -1,10 +1,10 @@
 /** @format */
 
-import { Outlet } from 'react-router-dom';
-import './_index.scss';
 import ThemeComponent from 'device/mobile/components/theme';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const LayoutKYCComponent = () => {
+const BasicLayoutComponent = () => {
     return (
         <ThemeComponent>
             <Outlet />
@@ -12,4 +12,4 @@ const LayoutKYCComponent = () => {
     );
 };
 
-export default LayoutKYCComponent;
+export default BasicLayoutComponent;
