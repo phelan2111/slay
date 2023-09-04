@@ -1,0 +1,36 @@
+/** @format */
+
+$header: 82px;
+$footer: 88px;
+
+.layout-Basic {
+    &-header {
+    }
+
+    &-main {
+        min-height: calc(100dvh - $header - $footer);
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: center;
+        &-active {
+            background-color: white;
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+            animation: activeFooter 0.8s;
+            @keyframes activeFooter {
+                0% {
+                    width: 0px;
+                    height: 0px;
+                }
+                100% {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
+    }
+}

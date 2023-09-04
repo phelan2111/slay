@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -22,12 +22,14 @@ window.addEventListener('resize', resizeOps);
 
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
-            <RouterProvider
-                router={isMobileDevice ? rootRoutesMobile : rootRoutesDesktop}
-                fallbackElement={<>Not Founds 404</>}
-            />
-        </Provider>
+        <Suspense fallback={<>Loading</>}>
+            <Provider store={store}>
+                <RouterProvider
+                    router={isMobileDevice ? rootRoutesMobile : rootRoutesDesktop}
+                    fallbackElement={<>Not Founds 404</>}
+                />
+            </Provider>
+        </Suspense>
     </React.StrictMode>
 );
 
