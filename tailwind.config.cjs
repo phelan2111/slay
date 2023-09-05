@@ -7,7 +7,11 @@ module.exports = {
     content: ['./public/index.html', './src/**/*.{tsx,ts}'],
     theme: {
         extend: {
-            colors: {},
+            colors: {
+                white_burl: '#FCFDFD',
+                dark_burl: 'rgba(0,0,0, 0.5)',
+                dark: '#1B2430',
+            },
             backgroundImage: {
                 'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
                 'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',

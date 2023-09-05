@@ -5,6 +5,8 @@ import SpeedDialComponent from './speedDial';
 import './_index.scss';
 import { langSelector, setLangs } from 'stores/reducer/lang';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { PATH } from 'utils/enums';
 
 interface IThemeComponent {
     children: React.ReactNode;
@@ -31,6 +33,7 @@ const ThemeComponent = ({ children }: IThemeComponent) => {
     const [state, setState] = React.useState<IState>(initial);
     const { lang } = useSelector(langSelector);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleOpen = () => setState({ ...state, open: !state.open });
     const handleClose = () => setState({ ...state, open: !state.open });
@@ -51,6 +54,8 @@ const ThemeComponent = ({ children }: IThemeComponent) => {
             case ACTION_SPEED_DIAL.PROFILE:
                 break;
             case ACTION_SPEED_DIAL.POST:
+                setState({ ...state, open: !state.open });
+                navigate(PATH.SLAY_HOME);
                 break;
             default:
                 break;
@@ -59,7 +64,14 @@ const ThemeComponent = ({ children }: IThemeComponent) => {
 
     return (
         <section className="w-full relative ThemeM-height">
-            <article className={state.theme ? 'dark' : ''}>{children}</article>
+            <article className={state.theme ? 'dark' : ''}>
+                <article
+                    className={`layout-Basic-height w-full bg-center ${
+                        state.theme ? 'bg-black' : 'bg-kyc-mobile'
+                    }`}
+                ></article>
+                {children}
+            </article>
             <article>
                 <SpeedDialComponent
                     theme={state.theme}

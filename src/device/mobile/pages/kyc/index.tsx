@@ -72,24 +72,34 @@ const Index = () => {
     const [state, setState] = React.useState<IState>(initialState);
 
     return (
-        <Box className={'flex flex-col gap-4 relative'}>
-            {stepsForm(setState).map((item, index) => {
-                return (
-                    item.id === state.active && (
-                        <Box
-                            key={Index.name + index.toString()}
-                            className="text-white flex flex-col gap-2"
-                        >
-                            <Box className={'text-3xl font-bold uppercase'}>
-                                {item.title}
-                            </Box>
-                            <Box className="text-sm">{item.description}</Box>
-                        </Box>
-                    )
-                );
-            })}
-
-            {stepsForm(setState)[state.active].component}
+        <Box
+            key={state.active}
+            className="bg-kyc-mobile bg-cover bg-center bg-no-repeat flex justify-center items-center layoutM_height p-4"
+        >
+            <Box className="p-8 rounded-lg relative overflow-hidden layoutM-animationRedirectTransform">
+                <Box className="backdrop-blur-md w-full h-full absolute top-0 left-0"></Box>
+                <Box>
+                    <Box className={'flex flex-col gap-4 relative'}>
+                        {stepsForm(setState).map((item, index) => {
+                            return (
+                                item.id === state.active && (
+                                    <Box
+                                        key={Index.name + index.toString()}
+                                        className="text-white flex flex-col gap-2"
+                                    >
+                                        <Box className={'text-3xl font-bold uppercase'}>
+                                            {item.title}
+                                        </Box>
+                                        <Box className="text-sm">{item.description}</Box>
+                                    </Box>
+                                )
+                            );
+                        })}
+                        {stepsForm(setState)[state.active].component}
+                    </Box>
+                </Box>
+                <Box className="backdrop-blur-md absolute w-full h-full layoutM-animationRedirect"></Box>
+            </Box>
         </Box>
     );
 };

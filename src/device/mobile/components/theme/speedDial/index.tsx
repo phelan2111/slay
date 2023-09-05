@@ -68,7 +68,7 @@ const SpeedDialComponent = ({
                 open={open}
             />
             <SpeedDial
-                className="fixed right-6 bottom-8"
+                className="fixed right-6 bottom-14"
                 ariaLabel="SpeedDial tooltip example"
                 icon={
                     open ? (

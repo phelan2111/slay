@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +8,7 @@ import { RouterProvider } from 'react-router-dom';
 import { rootRoutesDesktop, rootRoutesMobile } from 'routes';
 import { Provider } from 'react-redux';
 import { store } from 'stores';
+import LoadingPage from 'core/loading/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -22,12 +23,14 @@ window.addEventListener('resize', resizeOps);
 
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
-            <RouterProvider
-                router={isMobileDevice ? rootRoutesMobile : rootRoutesDesktop}
-                fallbackElement={<>Not Founds 404</>}
-            />
-        </Provider>
+        <Suspense fallback={<LoadingPage />}>
+            <Provider store={store}>
+                <RouterProvider
+                    router={isMobileDevice ? rootRoutesMobile : rootRoutesDesktop}
+                    fallbackElement={<>Not Founds 404</>}
+                />
+            </Provider>
+        </Suspense>
     </React.StrictMode>
 );
 
