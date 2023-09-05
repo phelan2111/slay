@@ -1,22 +1,17 @@
 /** @format */
 
-import { Avatar, Box, IconButton } from '@mui/material';
-import React from 'react';
-import { BiChevronLeft } from 'react-icons/bi';
+import { Box, IconButton } from '@mui/material';
+import { BiSearchAlt } from 'react-icons/bi';
 
 const HeaderComponents = () => {
     return (
-        <Box className="flex items-center justify-between p-4">
+        <Box className="flex items-center justify-between px-4 py-2 backdrop-blur-3xl dark:bg-gradient-to-r from-purple-600 to-blue-600 rounded-bl-3xl rounded-br-3xl">
+            <Box className="text-3xl text-white">
+                SLAY.<span className="text-sm">hello</span>
+            </Box>
             <IconButton>
-                <BiChevronLeft className="text-black" />
+                <BiSearchAlt className="text-white bg-inherit" />
             </IconButton>
-            <Avatar
-                sx={{
-                    width: 50,
-                    height: 50,
-                }}
-                src="https://i.pinimg.com/236x/b7/93/2d/b7932d6f6c4e6e6d9e0fc94cdfd8c2bc.jpg"
-            />
         </Box>
     );
 };

@@ -1,9 +1,14 @@
 /** @format */
 
-$header: 82px;
+$header: 56px;
 $footer: 88px;
 
 .layout-Basic {
+    &-height {
+        min-height: 100vh;
+        position: fixed;
+        z-index: 1;
+    }
     &-header {
     }
 
@@ -12,8 +17,7 @@ $footer: 88px;
     }
 
     &-footer {
-        display: flex;
-        justify-content: center;
+        height: $footer;
         &-active {
             background-color: white;
             position: absolute;

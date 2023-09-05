@@ -64,7 +64,14 @@ const ThemeComponent = ({ children }: IThemeComponent) => {
 
     return (
         <section className="w-full relative ThemeM-height">
-            <article className={state.theme ? 'dark' : ''}>{children}</article>
+            <article className={state.theme ? 'dark' : ''}>
+                <article
+                    className={`layout-Basic-height w-full bg-center ${
+                        state.theme ? 'bg-black' : 'bg-kyc-mobile'
+                    }`}
+                ></article>
+                {children}
+            </article>
             <article>
                 <SpeedDialComponent
                     theme={state.theme}

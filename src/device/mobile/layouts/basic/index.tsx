@@ -10,14 +10,14 @@ import FooterComponent from './components/footer';
 const BasicLayoutComponent = () => {
     return (
         <ThemeComponent>
-            <section>
-                <header className="layout-Basic-header">
+            <section className="bg-transparent relative z-10">
+                <header className="layout-Basic-header dark:bg-dark_burl">
                     <HeaderComponents />
                 </header>
-                <main className="layout-Basic-main">
+                <main className="layout-Basic-main dark:bg-black">
                     <Outlet />
                 </main>
-                <footer className="layout-Basic-footer bg-gradient-to-r from-purple-600 to-blue-600">
+                <footer className="layout-Basic-footer">
                     <FooterComponent />
                 </footer>
             </section>
