@@ -1,0 +1,33 @@
+/** @format */
+
+.scroll-hidden {
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar {
+        height: 1px;
+        border-radius: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+}
+
+.animation {
+    &-tranFromY {
+        animation: tranFormY 0.4s;
+        @keyframes tranFormY {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+    }
+}

@@ -66,22 +66,24 @@ const FooterComponent = () => {
     );
 
     return (
-        <Box className="fixed bottom-0 backdrop-blur-3xl bg-gradient-to-r from-blue-500 to-blue-700 w-full flex justify-center rounded-tr-3xl rounded-tl-3xl">
-            <Box className="flex p-4">
+        <Box className="fixed bottom-0 backdrop-blur-3xl bg-white w-full flex justify-center border-t">
+            <Box className="flex p-2">
                 {itemFooter.map((item, index) => (
                     <Box
                         onClick={() => onActive(item)}
                         key={FooterComponent.name + index.toString()}
                         className={
-                            'flex items-center justify-center rounded-full h-14 w-14 relative'
+                            'flex items-center justify-center rounded-full h-12 w-12 relative'
                         }
                     >
                         {item.id === state.active && (
-                            <Box className="layout-Basic-footer-active rounded-full"></Box>
+                            <Box className="layout-Basic-footer-active border border-black dark:border-white rounded-full"></Box>
                         )}
                         <Box
                             className={`absolute ${
-                                item.id === state.active ? 'text-black' : 'text-white'
+                                item.id === state.active
+                                    ? 'text-black font-extrabold dark:text-white'
+                                    : 'text-black dark:text-white'
                             }`}
                         >
                             {item.icon}

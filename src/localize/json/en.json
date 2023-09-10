@@ -23,5 +23,9 @@
     "kyc.forgotPassword.title": "Forgot Password",
     "kyc.forgotPassword.description": "Forgot your password? do not worry. There will be a four-character OTP for your phone number.",
     "kyc.forgotPassword.goBack": "Do you already have an account",
-    "kyc.forgotPassword.send": "Send"
+    "kyc.forgotPassword.send": "Send",
+    "story.yourStory": "Your story",
+    "comment": "Comment",
+    "like": "Like",
+    "share": "Share"
 }

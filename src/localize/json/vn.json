@@ -23,5 +23,9 @@
     "kyc.forgotPassword.title": "Quên mật khẩu",
     "kyc.forgotPassword.description": "Bạn quên mật khẩu? Đừng lo lắng. Sẽ có OTP gồm bốn kí tự gửi về số điện thoại của bạn.",
     "kyc.forgotPassword.goBack": "Bạn đã có tài khoản",
-    "kyc.forgotPassword.send": "Gửi"
+    "kyc.forgotPassword.send": "Gửi",
+    "story.yourStory": "Bản tin của bạn",
+    "comment": "Bình luận",
+    "like": "Thích",
+    "share": "Chia sẽ"
 }
