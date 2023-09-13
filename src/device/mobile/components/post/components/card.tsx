@@ -78,33 +78,20 @@ type TState = {
 };
 
 const initialState: TState = {
-    action: ACTION.NULL,
+    action: ACTION.COMMENT,
 };
 
 type TActionComponent = {
     action: ACTION;
-    onReset: () => void;
 };
-const ActionComponent = ({ action, ...props }: TActionComponent) => {
+const ActionComponent = ({ action}: TActionComponent) => {
     switch (action) {
         case ACTION.COMMENT:
-            return (
-                <ActionBackDrop {...props} open={EqualTwoNumber(action, ACTION.COMMENT)}>
-                    <CommentComponent />
-                </ActionBackDrop>
-            );
+            return <CommentComponent />;
         case ACTION.EXTEND:
-            return (
-                <ActionBackDrop {...props} open={EqualTwoNumber(action, ACTION.EXTEND)}>
-                    <ExtendComponent />
-                </ActionBackDrop>
-            );
+            return <ExtendComponent />;
         case ACTION.SHARE:
-            return (
-                <ActionBackDrop {...props} open={EqualTwoNumber(action, ACTION.SHARE)}>
-                    <ShareComponent />
-                </ActionBackDrop>
-            );
+            return <ShareComponent />;
         default:
             return <React.Fragment></React.Fragment>;
     }
@@ -261,7 +248,12 @@ const CardPost = () => {
                     </Box>
                 );
             })}
-            <ActionComponent onReset={onReset} action={state.action} />
+            <ActionBackDrop
+                onReset={onReset}
+                open={!EqualTwoNumber(state.action, ACTION.NULL)}
+            >
+                <ActionComponent action={state.action} />
+            </ActionBackDrop>
         </React.Fragment>
     );
 };

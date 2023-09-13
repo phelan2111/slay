@@ -10,24 +10,35 @@ type TActionBackDrop = {
 };
 const ActionBackDrop: React.FC<TActionBackDrop> = ({ open, children, onReset }) => {
     useEffect(() => {
-        document.body.style.overflow = 'hidden';
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        }
         return () => {
             document.body.style.overflow = 'auto';
         };
-    });
+    },[open]);
 
     return (
-        <Backdrop
-            sx={{
-                display: 'flex',
-                alignItems: 'flex-end',
-            }}
-            onClick={onReset}
-            className="z-10"
-            open={open}
-        >
-            <Box className="bg-white w-full animation-tranFromY">{children}</Box>
-        </Backdrop>
+        <React.Fragment>
+            <Backdrop
+                sx={{
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    zIndex: '10'
+                }}
+                onClick={onReset}
+                className="z-10"
+                open={open}
+            >
+            </Backdrop>
+                <Box
+                key={`${open}`}
+                className="bg-white w-full animation-tranFromY fixed bottom-0 right-0 z-20"
+            >
+                {children}
+            </Box>
+            
+        </React.Fragment>
     );
 };
 
