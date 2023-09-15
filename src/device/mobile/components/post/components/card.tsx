@@ -78,7 +78,7 @@ type TState = {
 };
 
 const initialState: TState = {
-    action: ACTION.COMMENT,
+    action: ACTION.NULL,
 };
 
 type TActionComponent = {
