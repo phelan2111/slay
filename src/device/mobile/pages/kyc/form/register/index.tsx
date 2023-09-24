@@ -21,18 +21,16 @@ const RegisterComponent: React.FC<IRegisterComponent> = ({ setState }) => {
             <Box className="flex flex-col gap-4">
                 <From onSubmit={(dataItem) => {}} filed={['name', 'email', 'phone']}>
                     <Box className="flex flex-col gap-6">
-                        <Box className="grid grid-cols-2 gap-4">
-                            <InputKYC
-                                label={<Localize til="kyc.signUp.firstName" />}
-                                color="primary"
-                                name="firstName"
-                            />
-                            <InputKYC
-                                label={<Localize til="kyc.signUp.lastName" />}
-                                color="primary"
-                                name="lastName"
-                            />
-                        </Box>
+                        <InputKYC
+                            label={<Localize til="kyc.signUp.firstName" />}
+                            color="primary"
+                            name="firstName"
+                        />
+                        <InputKYC
+                            label={<Localize til="kyc.signUp.lastName" />}
+                            color="primary"
+                            name="lastName"
+                        />
                         <InputKYC
                             color="primary"
                             label={<Localize til="kyc.signIn.numberPhone" />}

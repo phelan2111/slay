@@ -1,7 +1,7 @@
 /** @format */
 
 $header: 56px;
-$footer: 88px;
+$footer: 65px;
 
 .layout-Basic {
     &-height {
@@ -19,11 +19,9 @@ $footer: 88px;
     &-footer {
         height: $footer;
         &-active {
-            background-color: white;
             position: absolute;
             width: inherit;
             height: inherit;
-            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
             animation: activeFooter 0.8s;
             @keyframes activeFooter {
                 0% {
