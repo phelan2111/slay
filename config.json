@@ -1,10 +1,11 @@
 {
     "user": {
-        "host": "http://0.0.0.0:5000/api",
+        "host": "https://api.slay.phamvankhang.name.vn",
+        "static": "https://static.phamvankhang.name.vn",
         "api": {
             "kyc": {
-                "register": "/kyc/register",
-                "login": "/kyc/login"
+                "register": "/auth/register",
+                "login": "/auth/login"
             },
             "post": "/post",
             "detail": {
